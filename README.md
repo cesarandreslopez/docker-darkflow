@@ -5,6 +5,7 @@ This is a Dockerfile / Docker image that will install for you within a container
 - TensorFlow with GPU support (requires nvidia-docker - https://github.com/NVIDIA/nvidia-docker)
 - OpenCV
 - DarkFlow
+- Already downloaded weights for tiny-yolo-voc and yolo9000 (COCO)
 
 ## Intro
 
@@ -23,17 +24,21 @@ Python3, tensorflow 1.0, numpy, opencv 3. -- All dependencies handled by the Doc
 
 ## Dockerfile build
 
+```
 docker build -t docker-darkflow .
+```
 
 or just do a pull from the dockerhub
 
+```
 docker pull cesarandreslopez/docker-darkflow
+```
 
 ## To run
 
-'''
+```
 nvidia-docker run -it --name whatever cesarandreslopez/docker-darkflow  bash
-'''
+```
 
 And once in bash, go ahead and run any of the examples / commands below
 
